@@ -165,7 +165,7 @@ print("\n-------------------------------------------\n"
     + "-------------------------------------------")
 
 # A list of weekly sales figures (in pounds):
-weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
+# weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 
 # TODO:
 # 1. Initialise a variable called 'total_sales' and set it to 0.
@@ -175,8 +175,18 @@ weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 # 5. Print both the 'total_sales' and 'average_sale', formatted to two decimal places.
 
 # Write your code below:
-
-
+print("\n--------------------------------------------------\n"
+      + "Task 4: Lists and the FOR Loop\n"
+      + "-----------------------------------------------------")
+weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
+total_sales = 0
+for i in weekly_sales:
+    print(i)
+    total_sales = total_sales + i
+average_sale = (total_sales / len (weekly_sales))
+print(f"{total_sales:.2F}")
+print(f"{average_sale:.2F}")
+      
 # -------------------------------------------
 # CHECKPOINT
 # -------------------------------------------
