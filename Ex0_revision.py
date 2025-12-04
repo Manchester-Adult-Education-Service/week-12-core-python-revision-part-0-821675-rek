@@ -37,8 +37,13 @@ print("-------------------------------------------\n"
 # 4. Print the final 'total_cost' using an f-string, formatted to two decimal places.
 
 # Write your code below:
-
-
+print(f"------------------------------------------\n"
++ f"Task 1: Variables, Arithmetic, and Output\n"
++ f"---------------------------------------------\n")
+price = 45.00
+VAT_RATE = 0.20
+total_cost = price + (price * VAT_RATE)
+print(f"{round(total_cost, 2)}")
 # -------------------------------------------
 # CHECKPOINT
 # -------------------------------------------
@@ -70,7 +75,17 @@ print("\n-------------------------------------------\n"
 # 5. Otherwise (if total_cost is 60 or more), print "Purchase denied: Budget severely exceeded."
 
 # Write your code below:
-
+print("\n--------------------------------------------------------\n"
+      + "Task 2: Conditionals (IF/ELSE/ELSE) and Comparison\n"
+      + "----------------------------------------------------------")
+budget = 50
+if total_cost <= budget:
+    print(f"Purchase approved: Within budget.")
+elif total_cost > budget  and total_cost < 60:
+    print(f"Warning: Purchase exceeds budget but is manageable.")
+else:
+    total_cost >= 60
+    print(f"Purchase denied: Budget severely exceeded.")
 
 # -------------------------------------------
 # CHECKPOINT
@@ -104,12 +119,18 @@ print("\n-------------------------------------------\n"
 # 2. If a `ValueError` occurs, the function should print "Error: Please enter only numerical values." and return 0.
 #
 # HINT: You may need to use a single `try` block that covers both `int()` conversions.
-
+print("\n----------------------------------------------\n"
+      + "Task 3: Debugging a Function (Fixing a Crash)\n"
+      + "---------------------------------------------")
 def calculate_area():
     # Insert try/except block here
     # Remember to handle the input() and int() conversions inside the try block
-    length = int(input("Enter rectangle length: "))
-    width = int(input("Enter rectangle width: "))
+    try:
+        length = int(input("Enter rectangle length: "))
+        width = int(input("Enter rectangle width: "))
+    except ValueError:
+        print("Error: Please enter only numerical values.") 
+        return 0
     area = length * width
     return area
     # Insert except block here
@@ -144,7 +165,7 @@ print("\n-------------------------------------------\n"
     + "-------------------------------------------")
 
 # A list of weekly sales figures (in pounds):
-weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
+# weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 
 # TODO:
 # 1. Initialise a variable called 'total_sales' and set it to 0.
@@ -154,8 +175,18 @@ weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 # 5. Print both the 'total_sales' and 'average_sale', formatted to two decimal places.
 
 # Write your code below:
-
-
+print("\n--------------------------------------------------\n"
+      + "Task 4: Lists and the FOR Loop\n"
+      + "-----------------------------------------------------")
+weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
+total_sales = 0
+for i in weekly_sales:
+    print(i)
+    total_sales = total_sales + i
+average_sale = (total_sales / len (weekly_sales))
+print(f"{total_sales:.2F}")
+print(f"{average_sale:.2F}")
+      
 # -------------------------------------------
 # CHECKPOINT
 # -------------------------------------------
