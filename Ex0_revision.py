@@ -75,7 +75,17 @@ print("\n-------------------------------------------\n"
 # 5. Otherwise (if total_cost is 60 or more), print "Purchase denied: Budget severely exceeded."
 
 # Write your code below:
-
+print("\n--------------------------------------------------------\n"
+      + "Task 2: Conditionals (IF/ELSE/ELSE) and Comparison\n"
+      + "----------------------------------------------------------")
+budget = 50
+if total_cost <= budget:
+    print(f"Purchase approved: Within budget.")
+elif total_cost > budget  and total_cost < 60:
+    print(f"Warning: Purchase exceeds budget but is manageable.")
+else:
+    total_cost >= 60
+    print(f"Purchase denied: Budget severely exceeded.")
 
 # -------------------------------------------
 # CHECKPOINT
